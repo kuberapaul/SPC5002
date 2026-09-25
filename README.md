@@ -1,9 +1,6 @@
 # SPC5002 Week 1 lab
 
-> **This file is yours from here on.** It is the only README in the
-> repository and no later week will overwrite it. Week 1's homework asks you
-> to add a *Running this* section; from Week 2 each week's brief arrives as
-> `docs/weekNN_brief.md` instead, so your own writing survives the term.
+
 
 AI in the Real World. The repository you build this week is the one you add to
 every week until May, and it is half the marks for this module.
