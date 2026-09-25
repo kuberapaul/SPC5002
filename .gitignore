@@ -1,0 +1,21 @@
+# outputs are produced by code, so they are not source
+outputs/
+*.png
+*.pdf
+
+# environments
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# notebook noise
+.ipynb_checkpoints/
+
+# editor and operating system
+.vscode/
+.idea/
+.DS_Store
+
+# NOTE the data directory is NOT ignored this week. That is a deliberate choice
+# and it stops being the right one somewhere around 100 MB. Week 10.

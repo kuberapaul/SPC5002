@@ -1,0 +1,8 @@
+# Needs Python 3.11 or newer.
+# Pinned on purpose. == not >=. Week 10 explains why in detail; for now, take it
+# that a version range is a promise you cannot keep.
+pandas==3.0.2
+numpy==2.4.4
+scikit-learn==1.8.0
+pytest==8.3.4
+jupyterlab==4.3.4
