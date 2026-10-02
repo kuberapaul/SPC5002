@@ -138,6 +138,46 @@ def main() -> None:
     orders = pd.concat([web, phone], ignore_index=True)
     orders = expect(orders, 1996, "combined orders")
     crm = read_crm()
+    duplicated_ids = crm.loc[
+        crm["customer_id"].duplicated(keep=False), "customer_id"
+    ].nunique()
+    duplicated_orders = int(orders["customer_id"].isin(
+        crm.loc[crm["customer_id"].duplicated(keep=False), "customer_id"]
+    ).sum())
+    if duplicated_ids != 27:
+        raise RowCountError(
+            f"CRM duplicated customers: expected 27, got {duplicated_ids}"
+        )
+    if duplicated_orders != 34:
+        raise RowCountError(f"orders for duplicated customers: expected 34, got {duplicated_orders}")
+
+    try:
+        orders.merge(crm, on="customer_id", how="left", validate="many_to_one")
+    except pd.errors.MergeError:
+        pass
+    else:
+        raise RowCountError("CRM duplicate check: many_to_one unexpectedly succeeded")
+
+    # Keep the first CRM row for each customer so the join remains many-to-one.
+    one_each = crm.drop_duplicates("customer_id", keep="first")
+    joined = orders.merge(one_each, on="customer_id", how="left", validate="many_to_one")
+    joined = expect(joined, 1996, "join")
+
+    OUT.mkdir(exist_ok=True)
+    report = {
+        "web": {"rows": 1900},
+        "phone": {"rows": 96},
+        "orders": {"rows": len(orders)},
+        "crm": {
+            "rows": len(crm),
+            "customers": int(crm["customer_id"].nunique()),
+            "duplicated_customers": duplicated_ids,
+        },
+        "duplicated_customer_orders": duplicated_orders,
+        "join": {"rows": len(joined)},
+    }
+    (OUT / "ingest_report.json").write_text(json.dumps(report, indent=2) + "\n")
+    joined.to_csv(OUT / "orders_joined.csv", index=False)
     print(f"web {len(web)} phone {len(phone)} orders {len(orders)} crm {len(crm)}")
 
 
