@@ -1,0 +1,2122 @@
+{
+ "extract": "call-centre order log",
+ "generated": "2026-01-15T04:02:11Z",
+ "period": {
+  "from": "2025-01-01",
+  "to": "2025-12-31"
+ },
+ "calls": [
+  {
+   "call_ref": "CC20250000",
+   "logged_at": "2025-12-22T12:34:00Z",
+   "agent": "agent09",
+   "order": {
+    "ref": "ORD-100005",
+    "line": {
+     "category": "Home & Garden",
+     "unit_price_pence": 7362,
+     "qty": 1
+    },
+    "discount_percent": 10,
+    "total_pence": 6626,
+    "tender": "CARD",
+    "delivery_days": 3,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10076,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250001",
+   "logged_at": "2025-07-14T18:37:00Z",
+   "agent": "agent03",
+   "order": {
+    "ref": "ORD-100049",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 3617,
+     "qty": 1
+    },
+    "discount_percent": 10,
+    "total_pence": 3255,
+    "tender": "CARD",
+    "delivery_days": 2,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10692,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250002",
+   "logged_at": "2025-10-04T15:48:00Z",
+   "agent": "agent12",
+   "order": {
+    "ref": "ORD-100152",
+    "line": {
+     "category": "Electronics",
+     "unit_price_pence": 12914,
+     "qty": "2"
+    },
+    "discount_percent": 0,
+    "total_pence": 25828,
+    "tender": "CARD",
+    "delivery_days": 2,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10069,
+    "prior_orders": 2
+   }
+  },
+  {
+   "call_ref": "CC20250003",
+   "logged_at": "2025-08-01T10:46:00Z",
+   "agent": "agent10",
+   "order": {
+    "ref": "ORD-100171",
+    "line": {
+     "category": "Sports/Outdoor",
+     "unit_price_pence": 8826,
+     "qty": 3
+    },
+    "discount_percent": 10,
+    "total_pence": 23830,
+    "tender": "CARD",
+    "delivery_days": 6,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10626,
+    "prior_orders": 1
+   }
+  },
+  {
+   "call_ref": "CC20250004",
+   "logged_at": "2025-12-19T10:16:00Z",
+   "agent": "agent18",
+   "order": {
+    "ref": "ORD-100211",
+    "line": {
+     "category": "Sports/Outdoor",
+     "unit_price_pence": 9408,
+     "qty": 2
+    },
+    "discount_percent": 0,
+    "total_pence": 18816,
+    "tender": "BNPL",
+    "delivery_days": 5,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10642,
+    "prior_orders": 2
+   }
+  },
+  {
+   "call_ref": "CC20250005",
+   "logged_at": "2025-01-26T12:43:00Z",
+   "agent": "agent12",
+   "order": {
+    "ref": "ORD-100236",
+    "line": {
+     "category": "Home & Garden",
+     "unit_price_pence": 4406,
+     "qty": 2
+    },
+    "discount_percent": 0,
+    "total_pence": 8812,
+    "tender": "BNPL",
+    "delivery_days": 4,
+    "returned": true
+   },
+   "customer": {
+    "crm_id": 10637,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250006",
+   "logged_at": "2025-03-18T08:02:00Z",
+   "agent": "agent08",
+   "order": {
+    "ref": "ORD-100249",
+    "line": {
+     "category": "Home & Garden",
+     "unit_price_pence": 6358,
+     "qty": 1
+    },
+    "discount_percent": 15,
+    "total_pence": 5404,
+    "tender": "CARD",
+    "delivery_days": 3,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10354,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250007",
+   "logged_at": "2025-02-24T09:29:00Z",
+   "agent": "agent04",
+   "order": {
+    "ref": "ORD-100274",
+    "line": {
+     "category": "Home & Garden",
+     "unit_price_pence": 3550,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 3550,
+    "tender": "CARD",
+    "delivery_days": 5,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10532,
+    "prior_orders": 2
+   }
+  },
+  {
+   "call_ref": "CC20250008",
+   "logged_at": "2025-01-28T13:03:00Z",
+   "agent": "agent05",
+   "order": {
+    "ref": "ORD-100311",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 5528,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 5528,
+    "tender": "CARD",
+    "delivery_days": 3,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10895,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250009",
+   "logged_at": "2025-09-15T13:27:00Z",
+   "agent": "agent03",
+   "order": {
+    "ref": "ORD-100314",
+    "line": {
+     "category": "Sports/Outdoor",
+     "unit_price_pence": 11238,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 11238,
+    "tender": "CARD",
+    "delivery_days": 3,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10112,
+    "prior_orders": 2
+   }
+  },
+  {
+   "call_ref": "CC20250010",
+   "logged_at": "2025-01-08T10:31:00Z",
+   "agent": "agent01",
+   "order": {
+    "ref": "ORD-100317",
+    "line": {
+     "category": "Health & Beauty",
+     "unit_price_pence": 2970,
+     "qty": 4
+    },
+    "discount_percent": 20,
+    "total_pence": 9504,
+    "tender": "PAYPAL",
+    "delivery_days": 4,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10950,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250011",
+   "logged_at": "2025-06-26T09:02:00Z",
+   "agent": "agent11",
+   "order": {
+    "ref": "ORD-100356",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 2907,
+     "qty": 2
+    },
+    "discount_percent": 0,
+    "total_pence": 5814,
+    "tender": "CARD",
+    "delivery_days": 5,
+    "returned": true
+   },
+   "customer": {
+    "crm_id": 10033,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250012",
+   "logged_at": "2025-01-29T12:04:00Z",
+   "agent": "agent15",
+   "order": {
+    "ref": "ORD-100365",
+    "line": {
+     "category": "Home & Garden",
+     "unit_price_pence": 5612,
+     "qty": 2
+    },
+    "discount_percent": 0,
+    "total_pence": 11224,
+    "tender": "CARD",
+    "delivery_days": 6,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10615,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250013",
+   "logged_at": "2025-10-18T18:56:00Z",
+   "agent": "agent18",
+   "order": {
+    "ref": "ORD-100376",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 5910,
+     "qty": "1"
+    },
+    "discount_percent": 0,
+    "total_pence": 5910,
+    "tender": "GIFT_VOUCHER",
+    "delivery_days": 2,
+    "returned": true
+   },
+   "customer": {
+    "crm_id": 10627,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250014",
+   "logged_at": "2025-01-11T15:20:00Z",
+   "agent": "agent02",
+   "order": {
+    "ref": "ORD-100398",
+    "line": {
+     "category": "Electronics",
+     "unit_price_pence": 20362,
+     "qty": 2
+    },
+    "discount_percent": 5,
+    "total_pence": 38688,
+    "tender": "CARD",
+    "delivery_days": 3,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10737,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250015",
+   "logged_at": "2025-09-18T09:57:00Z",
+   "agent": "agent16",
+   "order": {
+    "ref": "ORD-100400",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 6494,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 6494,
+    "tender": "CARD",
+    "delivery_days": 6,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10636,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250016",
+   "logged_at": "2025-08-30T11:45:00Z",
+   "agent": "agent07",
+   "order": {
+    "ref": "ORD-100424",
+    "line": {
+     "category": "Footwear ",
+     "unit_price_pence": 4688,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 4688,
+    "tender": "CARD",
+    "delivery_days": 3,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 11031,
+    "prior_orders": 3
+   }
+  },
+  {
+   "call_ref": "CC20250017",
+   "logged_at": "2025-12-17T18:52:00Z",
+   "agent": "agent17",
+   "order": {
+    "ref": "ORD-100435",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 2286,
+     "qty": 1
+    },
+    "discount_percent": 15,
+    "total_pence": 1943,
+    "tender": "CARD",
+    "delivery_days": 4,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10100,
+    "prior_orders": 3
+   }
+  },
+  {
+   "call_ref": "CC20250018",
+   "logged_at": "2025-10-16T10:29:00Z",
+   "agent": "agent06",
+   "order": {
+    "ref": "ORD-100466",
+    "line": {
+     "category": "Sports/Outdoor",
+     "unit_price_pence": 5635,
+     "qty": 2
+    },
+    "discount_percent": 0,
+    "total_pence": 11270,
+    "tender": "CARD",
+    "delivery_days": 3,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10852,
+    "prior_orders": 2
+   }
+  },
+  {
+   "call_ref": "CC20250019",
+   "logged_at": "2025-12-15T15:57:00Z",
+   "agent": "agent09",
+   "order": {
+    "ref": "ORD-100469",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 4162,
+     "qty": 1
+    },
+    "discount_percent": 15,
+    "total_pence": 3538,
+    "tender": "PAYPAL",
+    "delivery_days": 6,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10645,
+    "prior_orders": 2
+   }
+  },
+  {
+   "call_ref": "CC20250020",
+   "logged_at": "2025-05-10T09:50:00Z",
+   "agent": "agent16",
+   "order": {
+    "ref": "ORD-100475",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 8473,
+     "qty": 2
+    },
+    "discount_percent": 30,
+    "total_pence": 11862,
+    "tender": "CARD",
+    "delivery_days": 8,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10817,
+    "prior_orders": 1
+   }
+  },
+  {
+   "call_ref": "CC20250021",
+   "logged_at": "2025-09-09T12:05:00Z",
+   "agent": "agent03",
+   "order": {
+    "ref": "ORD-100506",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 4296,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 4296,
+    "tender": "PAYPAL",
+    "delivery_days": 5,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10057,
+    "prior_orders": 2
+   }
+  },
+  {
+   "call_ref": "CC20250022",
+   "logged_at": "2025-03-16T08:22:00Z",
+   "agent": "agent11",
+   "order": {
+    "ref": "ORD-100508",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 5737,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 5737,
+    "tender": "BNPL",
+    "delivery_days": 4,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10720,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250023",
+   "logged_at": "2025-06-02T14:58:00Z",
+   "agent": "agent04",
+   "order": {
+    "ref": "ORD-100511",
+    "line": {
+     "category": "Home & Garden",
+     "unit_price_pence": 5502,
+     "qty": 1
+    },
+    "discount_percent": 25,
+    "total_pence": 4126,
+    "tender": "CARD",
+    "delivery_days": 3,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10372,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250024",
+   "logged_at": "2025-06-25T13:30:00Z",
+   "agent": "agent07",
+   "order": {
+    "ref": "ORD-100515",
+    "line": {
+     "category": "Home & Garden",
+     "unit_price_pence": 10386,
+     "qty": 1
+    },
+    "discount_percent": 5,
+    "total_pence": 9867,
+    "tender": "PAYPAL",
+    "delivery_days": 3,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10666,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250025",
+   "logged_at": "2025-05-13T14:25:00Z",
+   "agent": "agent04",
+   "order": {
+    "ref": "ORD-100542",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 5632,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 5632,
+    "tender": "CARD",
+    "delivery_days": 6,
+    "returned": true
+   },
+   "customer": {
+    "crm_id": 10812,
+    "prior_orders": 1
+   }
+  },
+  {
+   "call_ref": "CC20250026",
+   "logged_at": "2025-12-02T13:36:00Z",
+   "agent": "agent13",
+   "order": {
+    "ref": "ORD-100557",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 5632,
+     "qty": 1
+    },
+    "discount_percent": 15,
+    "total_pence": 4787,
+    "tender": "CARD",
+    "delivery_days": 4,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10436,
+    "prior_orders": 1
+   }
+  },
+  {
+   "call_ref": "CC20250027",
+   "logged_at": "2025-10-01T08:12:00Z",
+   "agent": "agent16",
+   "order": {
+    "ref": "ORD-100560",
+    "line": {
+     "category": "Footwear ",
+     "unit_price_pence": 5294,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 5294,
+    "tender": "CARD",
+    "delivery_days": 4,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10806,
+    "prior_orders": 2
+   }
+  },
+  {
+   "call_ref": "CC20250028",
+   "logged_at": "2025-12-03T16:07:00Z",
+   "agent": "agent09",
+   "order": {
+    "ref": "ORD-100570",
+    "line": {
+     "category": "Footwear ",
+     "unit_price_pence": 8505,
+     "qty": 2
+    },
+    "discount_percent": 15,
+    "total_pence": 14458,
+    "tender": "CARD",
+    "delivery_days": 3,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10083,
+    "prior_orders": 2
+   }
+  },
+  {
+   "call_ref": "CC20250029",
+   "logged_at": "2025-11-11T13:45:00Z",
+   "agent": "agent10",
+   "order": {
+    "ref": "ORD-100587",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 4361,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 4361,
+    "tender": "CARD",
+    "delivery_days": 2,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10478,
+    "prior_orders": 1
+   }
+  },
+  {
+   "call_ref": "CC20250030",
+   "logged_at": "2025-10-28T17:49:00Z",
+   "agent": "agent16",
+   "order": {
+    "ref": "ORD-100591",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 3463,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 3463,
+    "tender": "CARD",
+    "delivery_days": 4,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10585,
+    "prior_orders": 2
+   }
+  },
+  {
+   "call_ref": "CC20250031",
+   "logged_at": "2025-04-30T16:08:00Z",
+   "agent": "agent05",
+   "order": {
+    "ref": "ORD-100614",
+    "line": {
+     "category": "Electronics",
+     "unit_price_pence": 17241,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 17241,
+    "tender": "PAYPAL",
+    "delivery_days": 5,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10485,
+    "prior_orders": 1
+   }
+  },
+  {
+   "call_ref": "CC20250032",
+   "logged_at": "2025-05-07T19:35:00Z",
+   "agent": "agent03",
+   "order": {
+    "ref": "ORD-100623",
+    "line": {
+     "category": "Home & Garden",
+     "unit_price_pence": 10416,
+     "qty": 1
+    },
+    "discount_percent": 25,
+    "total_pence": 7812,
+    "tender": "CARD",
+    "delivery_days": 9,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10603,
+    "prior_orders": 1
+   }
+  },
+  {
+   "call_ref": "CC20250033",
+   "logged_at": "2025-09-30T15:35:00Z",
+   "agent": "agent06",
+   "order": {
+    "ref": "ORD-100628",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 5863,
+     "qty": 1
+    },
+    "discount_percent": 5,
+    "total_pence": 5570,
+    "tender": "CARD",
+    "delivery_days": 3,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10308,
+    "prior_orders": 1
+   }
+  },
+  {
+   "call_ref": "CC20250034",
+   "logged_at": "2025-01-31T18:23:00Z",
+   "agent": "agent05",
+   "order": {
+    "ref": "ORD-100668",
+    "line": {
+     "category": "Sports/Outdoor",
+     "unit_price_pence": 5977,
+     "qty": "1"
+    },
+    "discount_percent": 0,
+    "total_pence": 5977,
+    "tender": "CARD",
+    "delivery_days": 4,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10859,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250035",
+   "logged_at": "2025-06-18T13:45:00Z",
+   "agent": "agent18",
+   "order": {
+    "ref": "ORD-100689",
+    "line": {
+     "category": "Sports/Outdoor",
+     "unit_price_pence": 5310,
+     "qty": 1
+    },
+    "discount_percent": 30,
+    "total_pence": 3717,
+    "tender": "CARD",
+    "delivery_days": 6,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10887,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250036",
+   "logged_at": "2025-08-13T16:13:00Z",
+   "agent": "agent10",
+   "order": {
+    "ref": "ORD-100701",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 3704,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 3704,
+    "tender": "CARD",
+    "delivery_days": 3,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10368,
+    "prior_orders": 2
+   }
+  },
+  {
+   "call_ref": "CC20250037",
+   "logged_at": "2025-03-23T13:02:00Z",
+   "agent": "agent08",
+   "order": {
+    "ref": "ORD-100712",
+    "line": {
+     "category": "Electronics",
+     "unit_price_pence": 23851,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 23851,
+    "tender": "CARD",
+    "delivery_days": 4,
+    "returned": true
+   },
+   "customer": {
+    "crm_id": 10146,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250038",
+   "logged_at": "2025-08-12T10:20:00Z",
+   "agent": "agent15",
+   "order": {
+    "ref": "ORD-100757",
+    "line": {
+     "category": "Electronics",
+     "unit_price_pence": 19955,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 19955,
+    "tender": "CARD",
+    "delivery_days": 2,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10489,
+    "prior_orders": 1
+   }
+  },
+  {
+   "call_ref": "CC20250039",
+   "logged_at": "2025-11-29T17:22:00Z",
+   "agent": "agent02",
+   "order": {
+    "ref": "ORD-100761",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 4221,
+     "qty": 2
+    },
+    "discount_percent": 0,
+    "total_pence": 8442,
+    "tender": "CARD",
+    "delivery_days": 5,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10306,
+    "prior_orders": 4
+   }
+  },
+  {
+   "call_ref": "CC20250040",
+   "logged_at": "2025-06-24T16:49:00Z",
+   "agent": "agent18",
+   "order": {
+    "ref": "ORD-100811",
+    "line": {
+     "category": "Health & Beauty",
+     "unit_price_pence": 3328,
+     "qty": 2
+    },
+    "discount_percent": 10,
+    "total_pence": 5990,
+    "tender": "CARD",
+    "delivery_days": 7,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10522,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250041",
+   "logged_at": "2025-08-10T10:08:00Z",
+   "agent": "agent06",
+   "order": {
+    "ref": "ORD-100814",
+    "line": {
+     "category": "Health & Beauty",
+     "unit_price_pence": 3225,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 3225,
+    "tender": "CARD",
+    "delivery_days": 4,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10168,
+    "prior_orders": 1
+   }
+  },
+  {
+   "call_ref": "CC20250042",
+   "logged_at": "2025-08-12T08:46:00Z",
+   "agent": "agent11",
+   "order": {
+    "ref": "ORD-100816",
+    "line": {
+     "category": "Footwear ",
+     "unit_price_pence": 6604,
+     "qty": 2
+    },
+    "discount_percent": 20,
+    "total_pence": 10566,
+    "tender": "CARD",
+    "delivery_days": 3,
+    "returned": true
+   },
+   "customer": {
+    "crm_id": 10480,
+    "prior_orders": 1
+   }
+  },
+  {
+   "call_ref": "CC20250043",
+   "logged_at": "2025-09-16T10:49:00Z",
+   "agent": "agent03",
+   "order": {
+    "ref": "ORD-100829",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 2361,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 2361,
+    "tender": "BNPL",
+    "delivery_days": 7,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10869,
+    "prior_orders": 1
+   }
+  },
+  {
+   "call_ref": "CC20250044",
+   "logged_at": "2025-12-20T17:21:00Z",
+   "agent": "agent04",
+   "order": {
+    "ref": "ORD-100836",
+    "line": {
+     "category": "Footwear ",
+     "unit_price_pence": 6308,
+     "qty": 1
+    },
+    "discount_percent": 30,
+    "total_pence": 4416,
+    "tender": "CARD",
+    "delivery_days": 4,
+    "returned": true
+   },
+   "customer": {
+    "crm_id": 10988,
+    "prior_orders": 3
+   }
+  },
+  {
+   "call_ref": "CC20250045",
+   "logged_at": "2025-04-21T11:14:00Z",
+   "agent": "agent16",
+   "order": {
+    "ref": "ORD-100840",
+    "line": {
+     "category": "Sports/Outdoor",
+     "unit_price_pence": 8161,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 8161,
+    "tender": "CARD",
+    "delivery_days": 2,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10388,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250046",
+   "logged_at": "2025-10-23T19:38:00Z",
+   "agent": "agent07",
+   "order": {
+    "ref": "ORD-100845",
+    "line": {
+     "category": "Electronics",
+     "unit_price_pence": 11907,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 11907,
+    "tender": "CARD",
+    "delivery_days": 3,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10550,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250047",
+   "logged_at": "2025-11-08T19:50:00Z",
+   "agent": "agent17",
+   "order": {
+    "ref": "ORD-100851",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 4061,
+     "qty": "1"
+    },
+    "discount_percent": 0,
+    "total_pence": 4061,
+    "tender": "CARD",
+    "delivery_days": 3,
+    "returned": true
+   },
+   "customer": {
+    "crm_id": 10967,
+    "prior_orders": 1
+   }
+  },
+  {
+   "call_ref": "CC20250048",
+   "logged_at": "2025-05-13T08:59:00Z",
+   "agent": "agent18",
+   "order": {
+    "ref": "ORD-100868",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 5845,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 5845,
+    "tender": "CARD",
+    "delivery_days": 11,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 11020,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250049",
+   "logged_at": "2025-01-19T10:11:00Z",
+   "agent": "agent15",
+   "order": {
+    "ref": "ORD-100945",
+    "line": {
+     "category": "Electronics",
+     "unit_price_pence": 27033,
+     "qty": 2
+    },
+    "discount_percent": 0,
+    "total_pence": 54066,
+    "tender": "PAYPAL",
+    "delivery_days": 9,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10644,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250050",
+   "logged_at": "2025-01-11T10:20:00Z",
+   "agent": "agent11",
+   "order": {
+    "ref": "ORD-100962",
+    "line": {
+     "category": "Home & Garden",
+     "unit_price_pence": 5931,
+     "qty": 2
+    },
+    "discount_percent": 0,
+    "total_pence": 11862,
+    "tender": "CARD",
+    "delivery_days": 5,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10929,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250051",
+   "logged_at": "2025-05-11T14:21:00Z",
+   "agent": "agent10",
+   "order": {
+    "ref": "ORD-100989",
+    "line": {
+     "category": "Footwear ",
+     "unit_price_pence": 5292,
+     "qty": 2
+    },
+    "discount_percent": 10,
+    "total_pence": 9526,
+    "tender": "PAYPAL",
+    "delivery_days": 2,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10473,
+    "prior_orders": 1
+   }
+  },
+  {
+   "call_ref": "CC20250052",
+   "logged_at": "2025-10-25T16:25:00Z",
+   "agent": "agent13",
+   "order": {
+    "ref": "ORD-101007",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 6305,
+     "qty": 2
+    },
+    "discount_percent": 0,
+    "total_pence": 12610,
+    "tender": "PAYPAL",
+    "delivery_days": 5,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10670,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250053",
+   "logged_at": "2025-05-01T17:35:00Z",
+   "agent": "agent13",
+   "order": {
+    "ref": "ORD-101100",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 6835,
+     "qty": "1"
+    },
+    "discount_percent": 0,
+    "total_pence": 6835,
+    "tender": "PAYPAL",
+    "delivery_days": 3,
+    "returned": true
+   },
+   "customer": {
+    "crm_id": 10198,
+    "prior_orders": 1
+   }
+  },
+  {
+   "call_ref": "CC20250054",
+   "logged_at": "2025-11-11T08:49:00Z",
+   "agent": "agent14",
+   "order": {
+    "ref": "ORD-101107",
+    "line": {
+     "category": "Electronics",
+     "unit_price_pence": 20925,
+     "qty": 2
+    },
+    "discount_percent": 0,
+    "total_pence": 41850,
+    "tender": "CARD",
+    "delivery_days": 3,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10977,
+    "prior_orders": 2
+   }
+  },
+  {
+   "call_ref": "CC20250055",
+   "logged_at": "2025-02-28T19:15:00Z",
+   "agent": "agent01",
+   "order": {
+    "ref": "ORD-101166",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 6313,
+     "qty": 2
+    },
+    "discount_percent": 0,
+    "total_pence": 12626,
+    "tender": "CARD",
+    "delivery_days": 7,
+    "returned": true
+   },
+   "customer": {
+    "crm_id": 10955,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250056",
+   "logged_at": "2025-08-20T08:27:00Z",
+   "agent": "agent08",
+   "order": {
+    "ref": "ORD-101210",
+    "line": {
+     "category": "Home & Garden",
+     "unit_price_pence": 11494,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 11494,
+    "tender": "CARD",
+    "delivery_days": 4,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10663,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250057",
+   "logged_at": "2025-12-21T08:40:00Z",
+   "agent": "agent17",
+   "order": {
+    "ref": "ORD-101235",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 2345,
+     "qty": 1
+    },
+    "discount_percent": 25,
+    "total_pence": 1759,
+    "tender": "CARD",
+    "delivery_days": 5,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10617,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250058",
+   "logged_at": "2025-08-12T16:42:00Z",
+   "agent": "agent06",
+   "order": {
+    "ref": "ORD-101240",
+    "line": {
+     "category": "Electronics",
+     "unit_price_pence": 30117,
+     "qty": 3
+    },
+    "discount_percent": 0,
+    "total_pence": 90351,
+    "tender": "GIFT_VOUCHER",
+    "delivery_days": 4,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10701,
+    "prior_orders": 2
+   }
+  },
+  {
+   "call_ref": "CC20250059",
+   "logged_at": "2025-01-01T19:31:00Z",
+   "agent": "agent18",
+   "order": {
+    "ref": "ORD-101245",
+    "line": {
+     "category": "Electronics",
+     "unit_price_pence": 27581,
+     "qty": 2
+    },
+    "discount_percent": 0,
+    "total_pence": 55162,
+    "tender": "PAYPAL",
+    "delivery_days": 4,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10546,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250060",
+   "logged_at": "2025-11-07T19:38:00Z",
+   "agent": "agent16",
+   "order": {
+    "ref": "ORD-101250",
+    "line": {
+     "category": "Electronics",
+     "unit_price_pence": 33214,
+     "qty": "1"
+    },
+    "discount_percent": 20,
+    "total_pence": 26571,
+    "tender": "CARD",
+    "delivery_days": 2,
+    "returned": true
+   },
+   "customer": {
+    "crm_id": 11057,
+    "prior_orders": 2
+   }
+  },
+  {
+   "call_ref": "CC20250061",
+   "logged_at": "2025-04-15T12:33:00Z",
+   "agent": "agent03",
+   "order": {
+    "ref": "ORD-101290",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 2453,
+     "qty": 2
+    },
+    "discount_percent": 0,
+    "total_pence": 4906,
+    "tender": "PAYPAL",
+    "delivery_days": 6,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10680,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250062",
+   "logged_at": "2025-12-13T18:21:00Z",
+   "agent": "agent15",
+   "order": {
+    "ref": "ORD-101307",
+    "line": {
+     "category": "Footwear ",
+     "unit_price_pence": 8711,
+     "qty": 2
+    },
+    "discount_percent": 0,
+    "total_pence": 17422,
+    "tender": "CARD",
+    "delivery_days": 6,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10730,
+    "prior_orders": 1
+   }
+  },
+  {
+   "call_ref": "CC20250063",
+   "logged_at": "2025-07-28T13:13:00Z",
+   "agent": "agent08",
+   "order": {
+    "ref": "ORD-101332",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 4738,
+     "qty": 2
+    },
+    "discount_percent": 0,
+    "total_pence": 9476,
+    "tender": "CARD",
+    "delivery_days": 2,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10957,
+    "prior_orders": 1
+   }
+  },
+  {
+   "call_ref": "CC20250064",
+   "logged_at": "2025-05-01T09:42:00Z",
+   "agent": "agent09",
+   "order": {
+    "ref": "ORD-101334",
+    "line": {
+     "category": "Home & Garden",
+     "unit_price_pence": 10192,
+     "qty": 1
+    },
+    "discount_percent": 10,
+    "total_pence": 9173,
+    "tender": "CARD",
+    "delivery_days": 3,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10196,
+    "prior_orders": 1
+   }
+  },
+  {
+   "call_ref": "CC20250065",
+   "logged_at": "2025-08-29T10:15:00Z",
+   "agent": "agent07",
+   "order": {
+    "ref": "ORD-101335",
+    "line": {
+     "category": "Electronics",
+     "unit_price_pence": 24473,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 24473,
+    "tender": "PAYPAL",
+    "delivery_days": 7,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10414,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250066",
+   "logged_at": "2025-07-12T12:02:00Z",
+   "agent": "agent16",
+   "order": {
+    "ref": "ORD-101351",
+    "line": {
+     "category": "Sports/Outdoor",
+     "unit_price_pence": 7444,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 7444,
+    "tender": "CARD",
+    "delivery_days": 2,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10530,
+    "prior_orders": 1
+   }
+  },
+  {
+   "call_ref": "CC20250067",
+   "logged_at": "2025-02-08T11:43:00Z",
+   "agent": "agent16",
+   "order": {
+    "ref": "ORD-101376",
+    "line": {
+     "category": "Electronics",
+     "unit_price_pence": 12780,
+     "qty": 1
+    },
+    "discount_percent": 5,
+    "total_pence": 12141,
+    "tender": "GIFT_VOUCHER",
+    "delivery_days": 10,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10037,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250068",
+   "logged_at": "2025-08-07T08:14:00Z",
+   "agent": "agent13",
+   "order": {
+    "ref": "ORD-101428",
+    "line": {
+     "category": "Electronics",
+     "unit_price_pence": 22392,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 22392,
+    "tender": "BNPL",
+    "delivery_days": 7,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10190,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250069",
+   "logged_at": "2025-12-12T19:10:00Z",
+   "agent": "agent09",
+   "order": {
+    "ref": "ORD-101459",
+    "line": {
+     "category": "Footwear ",
+     "unit_price_pence": 10876,
+     "qty": 2
+    },
+    "discount_percent": 20,
+    "total_pence": 17402,
+    "tender": "CARD",
+    "delivery_days": 4,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10450,
+    "prior_orders": 2
+   }
+  },
+  {
+   "call_ref": "CC20250070",
+   "logged_at": "2025-06-20T08:33:00Z",
+   "agent": "agent01",
+   "order": {
+    "ref": "ORD-101516",
+    "line": {
+     "category": "Electronics",
+     "unit_price_pence": 14238,
+     "qty": "1"
+    },
+    "discount_percent": 10,
+    "total_pence": 12814,
+    "tender": "CARD",
+    "delivery_days": 2,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10300,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250071",
+   "logged_at": "2025-03-26T16:32:00Z",
+   "agent": "agent18",
+   "order": {
+    "ref": "ORD-101527",
+    "line": {
+     "category": "Footwear ",
+     "unit_price_pence": 5236,
+     "qty": 2
+    },
+    "discount_percent": 0,
+    "total_pence": 10472,
+    "tender": "CARD",
+    "delivery_days": 3,
+    "returned": true
+   },
+   "customer": {
+    "crm_id": 10597,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250072",
+   "logged_at": "2025-09-30T13:20:00Z",
+   "agent": "agent14",
+   "order": {
+    "ref": "ORD-101539",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 5177,
+     "qty": 3
+    },
+    "discount_percent": 0,
+    "total_pence": 15531,
+    "tender": "CARD",
+    "delivery_days": 3,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10272,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250073",
+   "logged_at": "2025-12-01T19:45:00Z",
+   "agent": "agent17",
+   "order": {
+    "ref": "ORD-101587",
+    "line": {
+     "category": "Footwear ",
+     "unit_price_pence": 3772,
+     "qty": 2
+    },
+    "discount_percent": 0,
+    "total_pence": 7544,
+    "tender": "PAYPAL",
+    "delivery_days": 3,
+    "returned": true
+   },
+   "customer": {
+    "crm_id": 10502,
+    "prior_orders": 2
+   }
+  },
+  {
+   "call_ref": "CC20250074",
+   "logged_at": "2025-02-19T08:16:00Z",
+   "agent": "agent15",
+   "order": {
+    "ref": "ORD-101591",
+    "line": {
+     "category": "Home & Garden",
+     "unit_price_pence": 4272,
+     "qty": 1
+    },
+    "discount_percent": 5,
+    "total_pence": 4058,
+    "tender": "PAYPAL",
+    "delivery_days": 9,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10010,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250075",
+   "logged_at": "2025-08-15T11:50:00Z",
+   "agent": "agent07",
+   "order": {
+    "ref": "ORD-101605",
+    "line": {
+     "category": "Footwear ",
+     "unit_price_pence": 6401,
+     "qty": 2
+    },
+    "discount_percent": 0,
+    "total_pence": 12802,
+    "tender": "PAYPAL",
+    "delivery_days": 4,
+    "returned": true
+   },
+   "customer": {
+    "crm_id": 10262,
+    "prior_orders": 1
+   }
+  },
+  {
+   "call_ref": "CC20250076",
+   "logged_at": "2025-06-21T13:02:00Z",
+   "agent": "agent04",
+   "order": {
+    "ref": "ORD-101611",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 2842,
+     "qty": 2
+    },
+    "discount_percent": 0,
+    "total_pence": 5684,
+    "tender": "PAYPAL",
+    "delivery_days": 7,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10768,
+    "prior_orders": 1
+   }
+  },
+  {
+   "call_ref": "CC20250077",
+   "logged_at": "2025-07-26T11:12:00Z",
+   "agent": "agent05",
+   "order": {
+    "ref": "ORD-101625",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 4754,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 4754,
+    "tender": "BNPL",
+    "delivery_days": 2,
+    "returned": true
+   },
+   "customer": {
+    "crm_id": 10842,
+    "prior_orders": 1
+   }
+  },
+  {
+   "call_ref": "CC20250078",
+   "logged_at": "2025-05-16T09:57:00Z",
+   "agent": "agent07",
+   "order": {
+    "ref": "ORD-101641",
+    "line": {
+     "category": "Home & Garden",
+     "unit_price_pence": 5201,
+     "qty": "1"
+    },
+    "discount_percent": 0,
+    "total_pence": 5201,
+    "tender": "PAYPAL",
+    "delivery_days": 4,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10865,
+    "prior_orders": 1
+   }
+  },
+  {
+   "call_ref": "CC20250079",
+   "logged_at": "2025-06-14T09:22:00Z",
+   "agent": "agent01",
+   "order": {
+    "ref": "ORD-101695",
+    "line": {
+     "category": "Electronics",
+     "unit_price_pence": 12677,
+     "qty": "2"
+    },
+    "discount_percent": 5,
+    "total_pence": 24086,
+    "tender": "CARD",
+    "delivery_days": 4,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10952,
+    "prior_orders": 2
+   }
+  },
+  {
+   "call_ref": "CC20250080",
+   "logged_at": "2025-03-05T14:31:00Z",
+   "agent": "agent11",
+   "order": {
+    "ref": "ORD-101699",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 5357,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 5357,
+    "tender": "CARD",
+    "delivery_days": 7,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10583,
+    "prior_orders": 1
+   }
+  },
+  {
+   "call_ref": "CC20250081",
+   "logged_at": "2025-04-18T11:33:00Z",
+   "agent": "agent08",
+   "order": {
+    "ref": "ORD-101700",
+    "line": {
+     "category": "Footwear ",
+     "unit_price_pence": 3921,
+     "qty": 1
+    },
+    "discount_percent": 10,
+    "total_pence": 3529,
+    "tender": "CARD",
+    "delivery_days": 2,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10337,
+    "prior_orders": 2
+   }
+  },
+  {
+   "call_ref": "CC20250082",
+   "logged_at": "2025-02-23T08:37:00Z",
+   "agent": "agent14",
+   "order": {
+    "ref": "ORD-101717",
+    "line": {
+     "category": "Health & Beauty",
+     "unit_price_pence": 2439,
+     "qty": 1
+    },
+    "discount_percent": 10,
+    "total_pence": 2195,
+    "tender": "CARD",
+    "delivery_days": 3,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10661,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250083",
+   "logged_at": "2025-05-21T12:08:00Z",
+   "agent": "agent01",
+   "order": {
+    "ref": "ORD-101726",
+    "line": {
+     "category": "Sports/Outdoor",
+     "unit_price_pence": 8859,
+     "qty": 3
+    },
+    "discount_percent": 0,
+    "total_pence": 26577,
+    "tender": "CARD",
+    "delivery_days": 4,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 11031,
+    "prior_orders": 1
+   }
+  },
+  {
+   "call_ref": "CC20250084",
+   "logged_at": "2025-12-03T09:25:00Z",
+   "agent": "agent14",
+   "order": {
+    "ref": "ORD-101730",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 6577,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 6577,
+    "tender": "BNPL",
+    "delivery_days": 4,
+    "returned": true
+   },
+   "customer": {
+    "crm_id": 10155,
+    "prior_orders": 2
+   }
+  },
+  {
+   "call_ref": "CC20250085",
+   "logged_at": "2025-05-14T17:28:00Z",
+   "agent": "agent06",
+   "order": {
+    "ref": "ORD-101732",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 5141,
+     "qty": 2
+    },
+    "discount_percent": 0,
+    "total_pence": 10282,
+    "tender": "CARD",
+    "delivery_days": 3,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10264,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250086",
+   "logged_at": "2025-04-17T08:52:00Z",
+   "agent": "agent04",
+   "order": {
+    "ref": "ORD-101760",
+    "line": {
+     "category": "Electronics",
+     "unit_price_pence": 18156,
+     "qty": "1"
+    },
+    "discount_percent": 10,
+    "total_pence": 16340,
+    "tender": "CARD",
+    "delivery_days": 4,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10507,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250087",
+   "logged_at": "2025-11-10T09:34:00Z",
+   "agent": "agent15",
+   "order": {
+    "ref": "ORD-101783",
+    "line": {
+     "category": "Footwear ",
+     "unit_price_pence": 4615,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 4615,
+    "tender": "CARD",
+    "delivery_days": 6,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10840,
+    "prior_orders": 2
+   }
+  },
+  {
+   "call_ref": "CC20250088",
+   "logged_at": "2025-02-13T13:31:00Z",
+   "agent": "agent15",
+   "order": {
+    "ref": "ORD-101794",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 5286,
+     "qty": "2"
+    },
+    "discount_percent": 20,
+    "total_pence": 8458,
+    "tender": "CARD",
+    "delivery_days": 2,
+    "returned": true
+   },
+   "customer": {
+    "crm_id": 10202,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250089",
+   "logged_at": "2025-06-27T14:54:00Z",
+   "agent": "agent10",
+   "order": {
+    "ref": "ORD-101849",
+    "line": {
+     "category": "Home & Garden",
+     "unit_price_pence": 11543,
+     "qty": 1
+    },
+    "discount_percent": 10,
+    "total_pence": 10389,
+    "tender": "CARD",
+    "delivery_days": 5,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10240,
+    "prior_orders": 1
+   }
+  },
+  {
+   "call_ref": "CC20250090",
+   "logged_at": "2025-12-30T09:09:00Z",
+   "agent": "agent15",
+   "order": {
+    "ref": "ORD-101878",
+    "line": {
+     "category": "Sports/Outdoor",
+     "unit_price_pence": 8193,
+     "qty": 2
+    },
+    "discount_percent": 20,
+    "total_pence": 13109,
+    "tender": "CARD",
+    "delivery_days": 5,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10673,
+    "prior_orders": 1
+   }
+  },
+  {
+   "call_ref": "CC20250091",
+   "logged_at": "2025-02-15T10:32:00Z",
+   "agent": "agent04",
+   "order": {
+    "ref": "ORD-101883",
+    "line": {
+     "category": "Footwear ",
+     "unit_price_pence": 7564,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 7564,
+    "tender": "BNPL",
+    "delivery_days": 8,
+    "returned": true
+   },
+   "customer": {
+    "crm_id": 10331,
+    "prior_orders": 1
+   }
+  },
+  {
+   "call_ref": "CC20250092",
+   "logged_at": "2025-03-15T17:24:00Z",
+   "agent": "agent09",
+   "order": {
+    "ref": "ORD-101903",
+    "line": {
+     "category": "Home & Garden",
+     "unit_price_pence": 12204,
+     "qty": 2
+    },
+    "discount_percent": 5,
+    "total_pence": 23188,
+    "tender": "CARD",
+    "delivery_days": 5,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10178,
+    "prior_orders": 0
+   }
+  },
+  {
+   "call_ref": "CC20250093",
+   "logged_at": "2025-04-04T10:48:00Z",
+   "agent": "agent08",
+   "order": {
+    "ref": "ORD-101924",
+    "line": {
+     "category": "Apparel",
+     "unit_price_pence": 3926,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 3926,
+    "tender": "CARD",
+    "delivery_days": 7,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10416,
+    "prior_orders": 1
+   }
+  },
+  {
+   "call_ref": "CC20250094",
+   "logged_at": "2025-11-27T16:15:00Z",
+   "agent": "agent03",
+   "order": {
+    "ref": "ORD-101943",
+    "line": {
+     "category": "Electronics",
+     "unit_price_pence": 24024,
+     "qty": "4"
+    },
+    "discount_percent": 40,
+    "total_pence": 57658,
+    "tender": "PAYPAL",
+    "delivery_days": 5,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10706,
+    "prior_orders": 3
+   }
+  },
+  {
+   "call_ref": "CC20250095",
+   "logged_at": "2025-01-23T11:39:00Z",
+   "agent": "agent14",
+   "order": {
+    "ref": "ORD-101965",
+    "line": {
+     "category": "Home & Garden",
+     "unit_price_pence": 5861,
+     "qty": 1
+    },
+    "discount_percent": 0,
+    "total_pence": 5861,
+    "tender": "CARD",
+    "delivery_days": 3,
+    "returned": false
+   },
+   "customer": {
+    "crm_id": 10346,
+    "prior_orders": 0
+   }
+  }
+ ]
+}

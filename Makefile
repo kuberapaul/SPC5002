@@ -18,10 +18,11 @@ ifeq (,$(shell command -v $(PY) 2>/dev/null))
   endif
 endif
 
-.PHONY: help setup test clean verify run
+.PHONY: help setup test clean verify run ingest
 
 help:
 	@echo "make run          run the Week 1 script, write outputs/metrics.json"
+	@echo "make ingest       read the three sources, join, write the report and the joined table"
 	@echo ""
 	@echo "make test         run every contract test in the repository"
 	@echo "make verify       run the current week's entry point twice and compare"
@@ -41,18 +42,24 @@ clean:
 run:
 	$(PY) src/run.py
 
-# the one that matters. It compares, and it exits non-zero when they differ:
-# a check you cannot fail is not a check.
+ingest:
+	$(PY) src/ingest.py
+
+# the one that matters. It runs this week's entry point twice, hashes both files
+# it writes, and exits non-zero when the two runs differ: a check you cannot
+# fail is not a check.
+OUTS := outputs/ingest_report.json outputs/orders_joined.csv
+
 verify:
-	@$(PY) src/run.py > /dev/null
-	@A=$$(shasum -a 256 outputs/metrics.json 2>/dev/null || sha256sum outputs/metrics.json); \
-	 $(PY) src/run.py > /dev/null; \
-	 B=$$(shasum -a 256 outputs/metrics.json 2>/dev/null || sha256sum outputs/metrics.json); \
+	@$(PY) src/ingest.py > /dev/null
+	@A=$$(shasum -a 256 $(OUTS) 2>/dev/null || sha256sum $(OUTS)); \
+	 $(PY) src/ingest.py > /dev/null; \
+	 B=$$(shasum -a 256 $(OUTS) 2>/dev/null || sha256sum $(OUTS)); \
 	 echo "$$A"; echo "$$B"; \
 	 if [ "$$A" = "$$B" ]; then \
-	   echo "the two hashes match"; \
+	   echo "the two runs match"; \
 	 else \
-	   echo "THE TWO HASHES DIFFER. Something in your code is not seeded,"; \
+	   echo "THE TWO RUNS DIFFER. Something in your code is not seeded,"; \
 	   echo "or depends on the order a set or dict happened to be in,"; \
 	   echo "or on a file you wrote earlier."; \
 	   exit 1; \
