@@ -3,11 +3,13 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCES = ROOT / "data" / "sources"
+WEEK1 = ROOT / "data" / "retail_orders_week1.csv"
 OUT = ROOT / "outputs"
 
 ORDER_COLUMNS = [
@@ -27,14 +29,19 @@ ORDER_COLUMNS = [
 ]
 
 
-def _check_rows(frame: pd.DataFrame, expected: int, source: str) -> None:
-    if len(frame) != expected:
-        raise ValueError(f"{source}: expected {expected} rows, found {len(frame)}")
+class RowCountError(AssertionError):
+    pass
+
+
+def expect(frame: pd.DataFrame, n: int, what: str) -> pd.DataFrame:
+    if len(frame) != n:
+        raise RowCountError(f"{what}: expected {n}, got {len(frame)}")
+    return frame
 
 
 def read_web() -> pd.DataFrame:
     raw = pd.read_csv(SOURCES / "web_orders_2025.csv")
-    _check_rows(raw, 1900, "web source")
+    expect(raw, 1900, "web source")
     frame = pd.DataFrame(
         {
             "order_id": raw["Order ID"],
@@ -60,7 +67,7 @@ def read_web() -> pd.DataFrame:
 def read_phone() -> pd.DataFrame:
     payload = json.loads((SOURCES / "phone_orders_2025.json").read_text())
     calls = payload["calls"]
-    _check_rows(pd.DataFrame(calls), 96, "phone source")
+    expect(pd.DataFrame(calls), 96, "phone source")
 
     category_map = {
         "Apparel": "apparel",
@@ -102,9 +109,9 @@ def read_phone() -> pd.DataFrame:
 
 def read_crm() -> pd.DataFrame:
     raw = pd.read_excel(SOURCES / "crm_customers.xlsx", skiprows=2)
-    _check_rows(raw, 1088, "CRM source")
+    expect(raw, 1088, "CRM source")
     if raw["Customer ID"].duplicated(keep=False).sum() != 54:
-        raise ValueError("CRM source: expected 27 duplicated customer records")
+        raise RowCountError("CRM source: expected 27 duplicated customer records")
 
     frame = pd.DataFrame(
         {
@@ -116,31 +123,44 @@ def read_crm() -> pd.DataFrame:
             ),
         }
     )
-    return frame.drop_duplicates("customer_id", keep="first")
+    return expect(
+        frame.drop_duplicates("customer_id", keep="first"),
+        1061,
+        "CRM customers after duplicate resolution",
+    )
 
 
 def main() -> None:
     web = read_web()
     phone = read_phone()
     orders = pd.concat([web, phone], ignore_index=True)
-    _check_rows(orders, 1996, "combined orders")
+    orders = expect(orders, 1996, "combined orders")
 
     crm = read_crm()
     if crm["customer_id"].nunique() != 1061:
-        raise ValueError("CRM source: expected 1061 unique customers")
+        raise RowCountError("CRM source: expected 1061 unique customers")
 
     # The 1,996 source orders each have one CRM record after duplicate resolution.
     joined = orders.merge(crm, on="customer_id", how="left", validate="many_to_one")
-    _check_rows(joined, 1996, "joined orders")
+    joined = expect(joined, 1996, "joined orders")
     if joined["customer_region"].isna().any():
-        raise ValueError("joined orders: customer records are missing")
+        raise RowCountError("joined orders: customer records are missing")
 
     OUT.mkdir(exist_ok=True)
     report = {
-        "web": {"rows": len(web)},
-        "phone": {"rows": len(phone)},
-        "crm": {"rows_read": 1088, "unique_customers": len(crm)},
-        "join": {"rows": len(joined), "missing_customers": int(joined["customer_region"].isna().sum())},
+        "web": {"rows": len(web), "action": "read and standardised storefront orders"},
+        "phone": {"rows": len(phone), "action": "read and standardised call-centre orders"},
+        "combined": {"rows": len(orders), "action": "concatenated both order sources"},
+        "crm": {
+            "rows_read": 1088,
+            "unique_customers": len(crm),
+            "action": "read spreadsheet, checked duplicates, kept first record",
+        },
+        "join": {
+            "rows": len(joined),
+            "missing_customers": int(joined["customer_region"].isna().sum()),
+            "action": "many-to-one left join on customer_id",
+        },
     }
     (OUT / "ingest_report.json").write_text(json.dumps(report, indent=2) + "\n")
     joined.to_csv(OUT / "orders_joined.csv", index=False)
