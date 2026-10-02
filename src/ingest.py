@@ -163,6 +163,37 @@ def main() -> None:
     joined = orders.merge(one_each, on="customer_id", how="left", validate="many_to_one")
     joined = expect(joined, 1996, "join")
 
+    operations_join = orders.merge(crm, on="customer_id", how="left")
+    operations_join = expect(operations_join, 2030, "operations join")
+
+    week1 = pd.read_csv(
+        WEEK1,
+        parse_dates=["order_date"],
+    )
+    week1["order_date"] = week1["order_date"].dt.date
+    operations_join["order_date"] = pd.to_datetime(
+        operations_join["order_date"]
+    ).dt.date
+    shared = [column for column in week1.columns if column in operations_join.columns]
+    differing = {}
+    for column in shared:
+        left = operations_join.sort_values("order_id", kind="stable")[column].reset_index(drop=True)
+        right = week1.sort_values("order_id", kind="stable")[column].reset_index(drop=True)
+        if pd.api.types.is_float_dtype(left) or pd.api.types.is_float_dtype(right):
+            matches = np.isclose(left, right, equal_nan=True)
+        else:
+            matches = left.eq(right) | (left.isna() & right.isna())
+        mismatch_count = int((~matches).sum())
+        if mismatch_count:
+            differing[column] = mismatch_count
+    matching_columns = len(shared) - len(differing)
+    print(f"join {len(joined)}")
+    print(f"as operations ran it {len(operations_join)}")
+    print(
+        f"against Week 1: {matching_columns} of {len(shared)} columns match, "
+        f"differing {differing}"
+    )
+
     OUT.mkdir(exist_ok=True)
     report = {
         "web": {"rows": 1900},
@@ -175,6 +206,12 @@ def main() -> None:
         },
         "duplicated_customer_orders": duplicated_orders,
         "join": {"rows": len(joined)},
+        "operations_join": {"rows": len(operations_join)},
+        "week1_comparison": {
+            "matching_columns": matching_columns,
+            "shared_columns": len(shared),
+            "differing": differing,
+        },
     }
     (OUT / "ingest_report.json").write_text(json.dumps(report, indent=2) + "\n")
     joined.to_csv(OUT / "orders_joined.csv", index=False)
