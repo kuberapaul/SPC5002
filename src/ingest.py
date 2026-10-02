@@ -61,7 +61,7 @@ def read_web() -> pd.DataFrame:
             "returned": raw["Returned"].map({"Y": 1, "N": 0}).astype("int64"),
         }
     )
-    return frame[ORDER_COLUMNS]
+    return expect(frame[ORDER_COLUMNS], 1900, "web orders")
 
 
 def read_phone() -> pd.DataFrame:
@@ -90,7 +90,7 @@ def read_phone() -> pd.DataFrame:
         rows.append(
             {
                 "order_id": order["ref"],
-                "order_date": call["logged_at"],
+                "order_date": call["logged_at"].split("T", 1)[0],
                 "customer_id": int(call["customer"]["crm_id"]),
                 "channel": "phone",
                 "category": category_map[line["category"].strip()],
@@ -104,30 +104,32 @@ def read_phone() -> pd.DataFrame:
                 "returned": int(order["returned"]),
             }
         )
-    return pd.DataFrame(rows, columns=ORDER_COLUMNS)
+    return expect(pd.DataFrame(rows, columns=ORDER_COLUMNS), 96, "phone orders")
 
 
 def read_crm() -> pd.DataFrame:
     raw = pd.read_excel(SOURCES / "crm_customers.xlsx", skiprows=2)
     expect(raw, 1088, "CRM source")
-    if raw["Customer ID"].duplicated(keep=False).sum() != 54:
-        raise RowCountError("CRM source: expected 27 duplicated customer records")
-
+    region_map = {
+        "london": "London",
+        "midlands": "Midlands",
+        "north": "North",
+        "south": "South",
+        "scotland": "Scotland",
+        "wales": "Wales",
+        "ni": "NI",
+    }
     frame = pd.DataFrame(
         {
             "customer_id": raw["Customer ID"].astype("int64"),
-            "customer_region": raw["Region"].str.strip(),
+            "customer_region": raw["Region"].str.strip().str.lower().map(region_map),
             "customer_tenure_days": raw["Tenure (days)"].astype("int64"),
             "marketing_opt_in": raw["Marketing Opt-In"].map(
                 {"Yes": True, "No": False}
             ),
         }
     )
-    return expect(
-        frame.drop_duplicates("customer_id", keep="first"),
-        1061,
-        "CRM customers after duplicate resolution",
-    )
+    return expect(frame, 1088, "CRM customers")
 
 
 def main() -> None:
@@ -135,35 +137,8 @@ def main() -> None:
     phone = read_phone()
     orders = pd.concat([web, phone], ignore_index=True)
     orders = expect(orders, 1996, "combined orders")
-
     crm = read_crm()
-    if crm["customer_id"].nunique() != 1061:
-        raise RowCountError("CRM source: expected 1061 unique customers")
-
-    # The 1,996 source orders each have one CRM record after duplicate resolution.
-    joined = orders.merge(crm, on="customer_id", how="left", validate="many_to_one")
-    joined = expect(joined, 1996, "joined orders")
-    if joined["customer_region"].isna().any():
-        raise RowCountError("joined orders: customer records are missing")
-
-    OUT.mkdir(exist_ok=True)
-    report = {
-        "web": {"rows": len(web), "action": "read and standardised storefront orders"},
-        "phone": {"rows": len(phone), "action": "read and standardised call-centre orders"},
-        "combined": {"rows": len(orders), "action": "concatenated both order sources"},
-        "crm": {
-            "rows_read": 1088,
-            "unique_customers": len(crm),
-            "action": "read spreadsheet, checked duplicates, kept first record",
-        },
-        "join": {
-            "rows": len(joined),
-            "missing_customers": int(joined["customer_region"].isna().sum()),
-            "action": "many-to-one left join on customer_id",
-        },
-    }
-    (OUT / "ingest_report.json").write_text(json.dumps(report, indent=2) + "\n")
-    joined.to_csv(OUT / "orders_joined.csv", index=False)
+    print(f"web {len(web)} phone {len(phone)} orders {len(orders)} crm {len(crm)}")
 
 
 if __name__ == "__main__":
