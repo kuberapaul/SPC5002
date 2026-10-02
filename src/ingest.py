@@ -81,7 +81,7 @@ def read_phone() -> pd.DataFrame:
         "CARD": "card",
         "PAYPAL": "paypal",
         "BNPL": "bnpl",
-        "GIFT_VOUCHER": "gift_card",
+        "GIFT_VOUCHER": "gift_voucher",
     }
     rows = []
     for call in calls:
